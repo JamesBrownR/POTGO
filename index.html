@@ -1,0 +1,119 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+    <div class="container">
+        <h1>Don't Let a Breakdown<br>Ruin Your Adventure</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Certified & Insured Mobile RV Repair serving Tavares, FL and surrounding areas.</p>
+        <a href="#contact" class="btn">Request Service</a>
+    </div>
+</section>
+
+<section id="services" class="section-padding">
+    <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="margin-bottom: 15px;">We Get You Back <span class="text-green">On The Go</span></h2>
+            <p>Owned by Todd Paolini. We are a fully mobile service, meaning you don't have to pack up camp to get fixed. We specialize in bringing professional repair directly to your location.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-snowflake text-green" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                <h3>A/C Repair</h3>
+                <p>Keep cool in the Florida heat with expert A/C maintenance and repair.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bolt text-green" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                <h3>Electrical</h3>
+                <p>12V and 110V diagnostics, battery systems, and wiring fixes.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-faucet text-green" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                <h3>Plumbing</h3>
+                <p>Leak repairs, water heater service, and pump replacements.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools text-green" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                <h3>General Maintenance</h3>
+                <p>Slide-outs, awnings, roof sealing, and seasonal inspections.</p>
+            </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 40px;">
+            <p><strong>Trusted on:</strong> <a href="https://rvhelp.com/providers/potgo-mobile-rv-repair-llc" target="_blank" style="text-decoration: underline;">RVHelp.com</a> & <a href="https://www.etrailer.com/installer/details/20696/tavares-fl/potgo-mobile-rv-repair?srsltid=AfmBOop4bgeISk-xV2dyM58js8-9Jj233L3K1PpLl1-XE2XEJ9t0xn4c" target="_blank" style="text-decoration: underline;">eTrailer</a></p>
+        </div>
+    </div>
+</section>
+
+<section id="work" class="section-padding" style="background: white;">
+    <div class="container">
+        <h2 class="text-center" style="margin-bottom: 40px;">Recent <span class="text-green">Work</span></h2>
+        <div class="gallery-grid">
+            {% for item in site.data.gallery %}
+            <div class="gallery-item">
+                <img src="{{ item.image }}" alt="{{ item.alt }}">
+                <div class="gallery-caption">{{ item.caption }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="reviews" class="section-padding reviews-section">
+    <div class="container">
+        <h2 class="text-center" style="margin-bottom: 40px;">Happy <span style="color:var(--potgo-orange);">Campers</span></h2>
+        <div class="reviews-grid">
+            {% for review in site.data.reviews %}
+            <div class="review-card">
+                <div class="stars">
+                    {% for i in (1..review.stars) %}<i class="fas fa-star"></i>{% endfor %}
+                </div>
+                <p>"{{ review.text }}"</p>
+                <h4 style="margin-top: 15px; color: var(--potgo-orange);">- {{ review.name }}</h4>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-padding">
+    <div class="container">
+        <h2 class="text-center" style="margin-bottom: 40px;">Contact <span class="text-green">POTGO</span></h2>
+        
+        <div class="contact-wrapper">
+            <div>
+                <h3 style="margin-bottom: 20px;">Send a Message</h3>
+                <form action="https://formspree.io/f/potgorv@gmail.com" method="POST">
+                    <label>Name</label>
+                    <input type="text" name="name" required placeholder="Your Name">
+                    
+                    <label>Email</label>
+                    <input type="email" name="email" required placeholder="Your Email">
+                    
+                    <label>Phone</label>
+                    <input type="tel" name="phone" placeholder="(555) 555-5555">
+                    
+                    <label>Issue Description / RV Type</label>
+                    <textarea name="message" rows="5" placeholder="e.g., A/C stopped working on my 2018 Jayco..."></textarea>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Send Request</button>
+                </form>
+            </div>
+
+            <div>
+                <h3 style="margin-bottom: 20px;">Service Area</h3>
+                <p style="margin-bottom: 15px;">Based in Tavares, FL. Serving Lake County and surrounding campsites.</p>
+                
+                <div class="map-container" style="border: 2px solid var(--potgo-green); border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111861.69554831556!2d-81.92804000273438!3d28.8186685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7af9e1fea688b%3A0x5dd0e62eea1a6fa1!2sPOTGO%20mobile%20RV%20repair!5e0!3m2!1sen!2sus!4v1771457559872!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <a href="tel:+16106799115" class="btn" style="background: var(--potgo-green); border-color: var(--potgo-green); width: 100%; text-align: center;">
+                    <i class="fas fa-phone"></i> Call (610) 679-9115
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
