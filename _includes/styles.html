@@ -1,0 +1,171 @@
+<style>
+    /* --- VARIABLES & RESET --- */
+    :root {
+        --potgo-green: #2d4f1e; /* Forest Green from Logo */
+        --potgo-dark: #1a2e12;
+        --potgo-orange: #e65100; /* Campfire Orange for CTA */
+        --potgo-cream: #f4f1ea; /* Canvas/Tent color for background */
+        --text-color: #333;
+        --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--potgo-cream);
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Oswald', sans-serif; /* Rugged, tall font */
+        text-transform: uppercase;
+        color: var(--potgo-dark);
+    }
+
+    a { text-decoration: none; transition: 0.3s; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* --- UTILITIES --- */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section-padding { padding: 80px 0; }
+    .text-center { text-align: center; }
+    .text-green { color: var(--potgo-green); }
+
+    /* --- BUTTONS --- */
+    .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--potgo-orange);
+        color: var(--white);
+        font-weight: bold;
+        border-radius: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid var(--potgo-orange);
+    }
+    .btn:hover {
+        background-color: transparent;
+        color: var(--potgo-orange);
+    }
+
+    /* --- HEADER --- */
+    header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .nav-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    }
+    .logo img { height: 70px; }
+    .nav-links a {
+        color: var(--potgo-dark);
+        font-weight: 600;
+        margin-left: 25px;
+    }
+    .nav-links a:hover { color: var(--potgo-orange); }
+
+    /* --- HERO --- */
+    .hero {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1625243170732-c65d6768340d?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--white);
+    }
+    .hero h1 { color: var(--white); font-size: 3.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+
+    /* --- SERVICES GRID --- */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .service-card {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        border-bottom: 4px solid var(--potgo-green);
+        text-align: center;
+    }
+
+    /* --- GALLERY --- */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+    }
+    .gallery-item { position: relative; overflow: hidden; height: 250px; border-radius: 8px; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-caption {
+        position: absolute; bottom: 0; left: 0; width: 100%;
+        background: rgba(45, 79, 30, 0.9); color: white;
+        padding: 10px; text-align: center;
+    }
+
+    /* --- REVIEWS --- */
+    .reviews-section { background-color: var(--potgo-dark); color: white; }
+    .reviews-section h2 { color: white; }
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    .review-card {
+        background: rgba(255,255,255,0.1);
+        padding: 25px;
+        border-radius: 8px;
+    }
+    .stars { color: #FFD700; margin-bottom: 10px; }
+
+    /* --- CONTACT --- */
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+    input, textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-family: inherit;
+    }
+    input:focus, textarea:focus { border-color: var(--potgo-green); outline: none; }
+    
+    .map-container iframe { width: 100%; border-radius: 8px; }
+
+    /* --- FOOTER --- */
+    footer { background: #111; color: #888; padding: 40px 0; font-size: 0.9rem; }
+    footer a { color: #ccc; }
+    footer h4 { color: white; margin-bottom: 15px; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+        .contact-wrapper { grid-template-columns: 1fr; }
+        .nav-links { display: none; } /* Mobile menu needed here usually */
+        .hero h1 { font-size: 2.5rem; }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
