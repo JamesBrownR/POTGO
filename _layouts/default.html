@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | POTGO Mobile RV Repair</title>
+    <meta name="description" content="Certified and Insured Mobile RV Repair in Tavares, FL. We come to you!">
+    {% include styles.html %}
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="/" class="logo">
+                <img src="/assets/img/logo.png" alt="POTGO - Paolini On The Go">
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="#services">Services</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact" class="btn">Get Help Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h4>POTGO Mobile RV Repair</h4>
+                    <p>Paolini On The Go. Certified & Insured.</p>
+                    <p>We bring the shop to your campsite or driveway.</p>
+                    <div style="margin-top: 15px; font-size: 1.5rem;">
+                        <a href="https://www.facebook.com/potgorv/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 4316 Abaco Dr, Tavares, FL 32778</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+16106799115">(610) 679-9115</a></p>
+                    <p><i class="fas fa-envelope"></i> potgorv@gmail.com</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h4>Service Hours</h4>
+                    <ul style="font-size: 0.9rem;">
+                        <li>Mon-Fri: 9AM – 5PM</li>
+                        <li>Sat-Sun: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px; border-top: 1px solid #333; padding-top: 20px;">
+                <p>&copy; {{ site.time | date: '%Y' }} POTGO Mobile RV Repair, LLC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
